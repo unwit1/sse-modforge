@@ -1,0 +1,31 @@
+{
+  "schema_version": "sse-modforge-integration-v1",
+  "repository": "unwit1/sse-modforge",
+  "canonical_domains": [
+    "skyrim-modding",
+    "sse-modding",
+    "skyrim-se-modding",
+    "skyrim-ae-modding",
+    "mod-factory"
+  ],
+  "ownership": {
+    "knowledge": "knowledge/libraries/skyrim-modding",
+    "schemas": "schemas/skyrim-*.schema.json",
+    "tooling": "tools/skyrim_mod_factory",
+    "ingestion_helpers": "tools/knowledge/*skyrim*"
+  },
+  "ingestion": {
+    "canonical_destination": "unwit1/sse-modforge",
+    "allow_agent_os_fallback": false,
+    "unavailable_behavior": "fail-or-queue-explicitly"
+  },
+  "integration": {
+    "consumer": "unwit1/personal-agent-os",
+    "direction": "agent-os-consumes-modforge",
+    "duplicate_canonical_knowledge": false
+  },
+  "migration": {
+    "status": "in-progress",
+    "source_repository": "unwit1/personal-agent-os"
+  }
+}
